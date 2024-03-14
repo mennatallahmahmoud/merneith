@@ -8,6 +8,7 @@ let landingImgs = document.querySelectorAll(".landing-imgs > img");
 let slidesCount = landingImgs.length;
 let activeSlide = 0;
 let contactBtn = document.querySelector('#contact-us button');
+let copyrightYear = document.querySelector(".copyright span");
 
 navbar.addEventListener("click", function() {
     navbarIcons.forEach((i) => {
@@ -69,3 +70,5 @@ scrollBtn.addEventListener("click", () => {
         headerLinks[0].classList.add("active");
     })
 })
+
+copyrightYear.appendChild(document.createTextNode(new Date().getFullYear()));
